@@ -22,6 +22,8 @@ function onInput(evt) {
     .then(data => createMarkup(data))
 
     .catch(err => {
+      userInfo.innerHTML = '';
+      userList.innerHTML = '';
       return Notify.failure('Oops, there is no country with that name');
     });
 }
